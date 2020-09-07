@@ -1,3 +1,5 @@
+import LoginPage from '../pageobjects/login.page'
+
 describe('webdriver.io page', () => {
     it('should have the right title', () => {
         browser.url('https://webdriver.io')
