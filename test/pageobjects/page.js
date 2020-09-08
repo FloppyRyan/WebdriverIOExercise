@@ -14,4 +14,8 @@ module.exports = class Page {
     open(){
         return browser.url('https://www.securian.com/insights-tools/retirement-calculator.html')
     }
+
+    close(){
+        return browser.quit
+    }
 }
