@@ -134,7 +134,8 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 60000,
+        require: ['@babel/register'],
     },
     //
     // =====
@@ -171,6 +172,9 @@ exports.config = {
      */
     // beforeSession: function (config, capabilities, specs) {
     // },
+    beforeSession () { // before hook works as well
+        require('expect-webdriverio')
+    },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
      * variables like `browser`. It is the perfect place to define custom commands.
